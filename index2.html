@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+    <style type="text/css">
+  
+.toggleAndLabel {
+  background: #fff;
+  border-top: 1px #d8dde0 solid;
+  border-bottom: 1px #d8dde0 solid;
+  padding: 1em;
+  margin: 5px -16px 1em;
+​
+  margin-left: 0;
+  margin-right: 0;
+}
+.toggleAndLabel label {
+  display: inline-block;
+  width: calc(100% - 4em);
+  vertical-align: middle;
+}
+.toggleAndLabel.waiting .spinner {
+  display: block;
+}
+.toggleAndLabel.waiting .toggleWrapper label:before, .toggleAndLabel.waiting .toggleWrapper label:after {
+  display: none;
+}
+.toggleAndLabel p {
+  display: inline-block;
+  width: calc(100% - 4em);
+  vertical-align: middle;
+} 
+​
+​
+.toggleWrapper {
+  display: inline-block;
+}
+.toggleWrapper .spinner {
+    background: none;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    padding: 0 0.875em;
+    width: auto;
+    height: 2em;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+​
+  .toggleWrapper input.toggle {
+    opacity: 0; 
+    position: absolute;
+    z-index: -1;
+  }
+  .toggleWrapper input.toggle span {
+      position: relative;
+      display: inline-block;
+      user-select: none;
+      transition: 0.4s ease;
+      height: 2.05em;
+      width: 3.5em;
+      border: 1px solid #e4e4e4;
+      border-radius: 4em;
+      vertical-align: middle;
+  }
+  .toggleWrapper input.toggle   + span::before {
+        content: "";
+        position: absolute;
+        display: block;
+        transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+        height: 2em;
+        width: 3.4em;
+        top: 0;
+        left: 0;
+        border-radius: 2em;
+  }
+  .toggleWrapper {
+  display: inline-block;
+}
+.toggleWrapper .spinner {
+  background: none;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  padding: 0 0.875em;
+  width: auto;
+  height: 2em;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.toggleWrapper input.toggle {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.toggleWrapper input.toggle + span {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  transition: 0.4s ease;
+  height: 2.05em;
+  width: 3.5em;
+  border: 1px solid #e4e4e4;
+  border-radius: 4em;
+  vertical-align: middle;
+}
+.toggleWrapper input.toggle + span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  height: 2em;
+  width: 3.4em;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+}
+.toggleWrapper input.toggle + span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+  background: #f0f4f5;
+  height: calc(2em - 2px);
+  width: calc(2em - 2px);
+  top: 1px;
+  left: 0px;
+  border-radius: 4em;
+}
+.toggleWrapper input.toggle:checked + span::before {
+  background: #007f3b;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+}
+.toggleWrapper input.toggle:checked + span::after {
+  left: 1.6em;
+}
+.toggleWrapper.waiting .spinner {
+  opacity: 1;
+}
+.toggleWrapper.waiting input.toggle + span {
+  opacity: 0;
+}
+.toggleWrapper.waiting input.toggle + span::before, .toggleWrapper.waiting input.toggle + span::after {
+  visibility: hidden;
+  opacity: 0;
+}
+​
+.loading-spinner-background {
+    position: fixed;
+    z-index: 10;
+    top: 0em;
+    right: 0em;
+    left: 0em;
+    bottom: 0em;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+  }
+​
+  .loading-spinner {
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-top: 0.3em solid rgba(0, 94, 184, 1);
+    border-right: 0.3em solid rgba(0, 94, 184, 1);
+    border-bottom: 0.3em solid rgba(0, 94, 184, 1);
+    border-left: 0.3em solid rgba(0, 94, 184, 0);
+    animation: spinner-animation 1.5s infinite linear;
+    background-color: rgba(255, 255, 255, 0);
+    display: inline-block;
+    margin: 5px;
+  }
+​
+​
+    </style>
+  </head>
+  <body>
+    <div  class="toggleAndLabel" data-purpose="cookie-toggle">
+      <label  aria-hidden="true" aria-label="Allow optional analytic cookies I accept the use of optional analytic cookies used to improve the performance of the NHS App" for="allow_cookies" class="nhsuk-u-font-size-19">
+        <strong >Allow optional analytic cookies</strong> 
+        <span  class="nhsuk-body">
+          <br>I accept the use of optional analytic cookies used to improve the performance of the NHS App
+        </span>
+      </label>
+      <div  class="toggleWrapper">
+        <div tabindex="-1" focusable="false" class="loading-spinner-background spinner" id="allow_cookies_spinner" style="visibility: hidden;">
+          <div tabindex="-1" focusable="false" class="loading-spinner">
+​
+          </div>
+        </div> 
+        <input  id="allow_cookies" type="checkbox" name="" role="switch" class="toggle"> 
+        <span id="spanallow_cookies" style="visibility: visible;"></span>
+      </div>
+    </div>
+ </body>
+</html>
