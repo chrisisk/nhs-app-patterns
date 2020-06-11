@@ -1,0 +1,270 @@
+ul.nhsuk-panel-list {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+ul.nhsuk-panel-list li {
+  background-color:#fff;
+  background: #fff url(https://raw.githubusercontent.com/nhsuk/nhsuk-frontend/master/packages/assets/icons/icon-chevron-right.svg) right -1px top 4px no-repeat;
+  background-size: 34px;
+  background-position:right 5px center;
+  position:relative;
+  box-sizing:border-box;
+  align-items:center!important;
+  margin-bottom:10px;
+  text-decoration: none;
+}
+
+
+ul.nhsuk-panel-list li a{
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  padding:15px 16px;
+  box-shadow: none!important;
+}
+
+ul.nhsuk-panel-list h2{
+  text-decoration: none;
+  display: inline-block;
+  color:#005eb8;
+}
+
+ul.nhsuk-panel-list p{
+  color:#212b32;
+  margin-right:20px;
+  font-weight: normal;
+}
+
+ul.nhsuk-panel-list li a:focus{
+  background:none;
+}
+
+ul.nhsuk-panel-list li a:hover h2{
+  text-decoration: underline;
+  display: inline-block;
+  color: #7C2855;
+}
+
+ul.nhsuk-panel-list li:hover {
+box-shadow:0 4px 0 0 #d8dde0;
+}
+
+ul.nhsuk-panel-list li a:focus h2{
+  background-color: #ffeb3b;
+  box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+  color: #212b32;
+  text-decoration: none;
+}
+
+.nhsuk-count span{
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  margin-top: -14px; 
+  font-weight: normal;
+  color:#212b32;
+  font-size: 22px;
+}
+
+h2.nhsuk-count{
+  margin-right: 60px;
+}
+
+.nhsuk-description span{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  margin-top: -40px; 
+  font-weight: normal;
+  color:#212b32;
+  font-size: 16px;
+  padding: 6px 0 6px 10px;
+}
+
+@media only screen and (max-width: 641px){
+  ul.nhsuk-panel-list{
+  margin-left:-16px;
+  margin-right:-16px;
+  }
+
+  .toggleAndLabel{
+    margin-left:-16px;
+    margin-right:-16px;
+    }
+}
+
+/* 
+najfnglsdjfnglsjngs
+
+*/
+
+.toggleAndLabel {
+  background: #fff;
+  padding: 16px;
+  
+}
+.toggleAndLabel label {
+  display: inline-block;
+  width: calc(100% - 4em);
+  vertical-align: middle;
+}
+.toggleAndLabel.waiting .spinner {
+  display: block;
+}
+.toggleAndLabel.waiting .toggleWrapper label:before, .toggleAndLabel.waiting .toggleWrapper label:after {
+  display: none;
+}
+.toggleAndLabel p {
+  display: inline-block;
+  width: calc(100% - 4em);
+  vertical-align: middle;
+} 
+​
+​
+.toggleWrapper {
+  display: inline-block;
+}
+.toggleWrapper .spinner {
+    background: none;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    padding: 0 0.875em;
+    width: auto;
+    height: 2em;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+​
+  .toggleWrapper input.toggle {
+    opacity: 0; 
+    position: absolute;
+    z-index: -1;
+  }
+  .toggleWrapper input.toggle span {
+      position: relative;
+      display: inline-block;
+      user-select: none;
+      transition: 0.4s ease;
+      height: 2.05em;
+      width: 3.5em;
+      border: 1px solid #e4e4e4;
+      border-radius: 4em;
+      vertical-align: middle;
+  }
+  .toggleWrapper input.toggle   + span::before {
+        content: "";
+        position: absolute;
+        display: block;
+        transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+        height: 2em;
+        width: 3.4em;
+        top: 0;
+        left: 0;
+        border-radius: 2em;
+  }
+  .toggleWrapper {
+  display: inline-block;
+}
+.toggleWrapper .spinner {
+  background: none;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  padding: 0 0.875em;
+  width: auto;
+  height: 2em;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.toggleWrapper input.toggle {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.toggleWrapper input.toggle + span {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  transition: 0.4s ease;
+  height: 2.05em;
+  width: 3.5em;
+  border: 1px solid #e4e4e4;
+  border-radius: 4em;
+  vertical-align: middle;
+}
+.toggleWrapper input.toggle + span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  height: 2em;
+  width: 3.4em;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+}
+.toggleWrapper input.toggle + span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+  background: #f0f4f5;
+  height: calc(2em - 2px);
+  width: calc(2em - 2px);
+  top: 1px;
+  left: 0px;
+  border-radius: 4em;
+}
+.toggleWrapper input.toggle:checked + span::before {
+  background: #007f3b;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+}
+.toggleWrapper input.toggle:checked + span::after {
+  left: 1.6em;
+}
+.toggleWrapper.waiting .spinner {
+  opacity: 1;
+}
+.toggleWrapper.waiting input.toggle + span {
+  opacity: 0;
+}
+.toggleWrapper.waiting input.toggle + span::before, .toggleWrapper.waiting input.toggle + span::after {
+  visibility: hidden;
+  opacity: 0;
+}
+​
+.loading-spinner-background {
+    position: fixed;
+    z-index: 10;
+    top: 0em;
+    right: 0em;
+    left: 0em;
+    bottom: 0em;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+  }
+​
+  .loading-spinner {
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-top: 0.3em solid rgba(0, 94, 184, 1);
+    border-right: 0.3em solid rgba(0, 94, 184, 1);
+    border-bottom: 0.3em solid rgba(0, 94, 184, 1);
+    border-left: 0.3em solid rgba(0, 94, 184, 0);
+    animation: spinner-animation 1.5s infinite linear;
+    background-color: rgba(255, 255, 255, 0);
+    display: inline-block;
+    margin: 5px;
+  }
