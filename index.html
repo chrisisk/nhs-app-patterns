@@ -73,28 +73,38 @@ NHS App design patterns
   <main class="nhsuk-main-wrapper " id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-grid-column-two-thirds" >
 
 
         <h1 class="nhsuk-heading-l">Toggle</h1>
-        <div  class="toggleAndLabel" data-purpose="cookie-toggle">
-          <label  aria-hidden="true" aria-label="Allow optional analytic cookies I accept the use of optional analytic cookies used to improve the performance of the NHS App" for="allow_cookies" class="nhsuk-u-font-size-19">
-            <strong >Allow optional analytic cookies</strong> 
-            <span  class="nhsuk-body">
-              <br>I accept the use of optional analytic cookies used to improve the performance of the NHS App
-            </span>
+
+        <div class="nhsuk-toggle-label" data-purpose="cookie-toggle">
+
+          <label  aria-hidden="true" aria-label="Allow optional analytic cookies I accept the use of optional analytic cookies used to improve the performance of the NHS App" for="allow_cookies">
+
+            <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Allow optional analytic cookies</h2> 
+
+            <p class="nhsuk-u-margin-bottom-2">I accept the use of optional analytic cookies used to improve the performance of the NHS App
+            </p>
+
+            <div class="nhsuk-toggle-wrapper"> 
+              <input  id="allow_cookies" type="checkbox" name="" role="switch" class="nhsuk-toggle"> 
+              <span id="spanallow_cookies"></span>
+            </div>
           </label>
-          <div  class="toggleWrapper">
-            <div tabindex="-1" focusable="false" class="loading-spinner-background spinner" id="allow_cookies_spinner" style="visibility: hidden;">
-              <div tabindex="-1" focusable="false" class="loading-spinner">
-      ​
-              </div>
-            </div> 
-            <input  id="allow_cookies" type="checkbox" name="" role="switch" class="toggle"> 
-            <span id="spanallow_cookies" style="visibility: visible;"></span>
-          </div>
+
+          
+       
         </div>
+
+       
+
+        
+
 <hr>
+
+
+
 
         <h1 class="nhsuk-heading-l">Panel links</h1>
 
@@ -106,7 +116,7 @@ NHS App design patterns
           </li>
 
           <li>
-            <a href="" aria-label="Cookies">
+            <a href="" aria-label="Login and password options">
               <h2 class="nhsuk-heading-s nhsuk-u-margin-bottom-0">Login and password options</h2>
             </a>
           </li>
@@ -119,21 +129,21 @@ NHS App design patterns
 
         <ul role="list" class="nhsuk-panel-list">
           <li>
-            <a href="">
+            <a href="" aria-label="Get advice about coronavirus">
               <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 count">Get advice about coronavirus</h2>
               <p class="nhsuk-u-margin-bottom-1">Find out what to do if you think you have coronavirus</p>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="" aria-label="Search conditions and treatments">
               <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 count">Search conditions and treatments</h2>
               <p class="nhsuk-u-margin-bottom-1">Find trusted NHS information on hundreds of conditions</p>
             </a>
           </li>
 
           <li>
-            <a href="">
+            <a href="" aria-label="Use NHS 111 online">
               <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 count">Use NHS 111 online</h2>
               <p class="nhsuk-u-margin-bottom-1">Check if you need urgent help and find out what to do next</p>
             </a>
@@ -141,69 +151,7 @@ NHS App design patterns
 
         </ul>
 
-        <hr>
-        <h1 class="nhsuk-heading-l">Panel link with count</h1>
-
-          <ul role="list" class="nhsuk-panel-list">
-
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-0 nhsuk-count">Test Results
-                <span>10</span>
-              </h2>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-0 nhsuk-count">Allergies
-                <span>9</span>
-              </h2>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-0 nhsuk-count">Consultations
-                <span>10</span>
-              </h2>
-            </a>
-          </li>
-
-          </ul>
-          <hr>
-
-          
-        <h1 class="nhsuk-heading-l">Panel link with description and date </h1>
-        <ul role="list" class="nhsuk-panel-list">
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 nhsuk-description">Dr John Smith
-                <span>1 June 2020</span>
-              </h2>
-              <p class="nhsuk-u-margin-bottom-1">Please book an appointment for your yearly flu jab</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 nhsuk-description">Dr John Smith
-                <span>1 June 2020</span>
-              </h2>
-              <p class="nhsuk-u-margin-bottom-1">Please book an appointment for your yearly flu jab</p>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2 nhsuk-description">Dr John Smith
-                <span>1 June 2020</span>
-              </h2>
-              <p class="nhsuk-u-margin-bottom-1">Please book an appointment for your yearly flu jabappointment for your yearly flu jabappointment for your yearly flu jab</p>
-              
-            </a>
-          </li>
-        </ul>
-
+       
       
       </div>
     </div>

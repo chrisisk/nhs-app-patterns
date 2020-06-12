@@ -89,102 +89,43 @@ h2.nhsuk-count{
   margin-right:-16px;
   }
 
-  .toggleAndLabel{
+  .nhsuk-toggle-label{
     margin-left:-16px;
     margin-right:-16px;
     }
 }
 
-/* 
-najfnglsdjfnglsjngs
 
-*/
 
-.toggleAndLabel {
-  background: #fff;
+.nhsuk-toggle-label {
   padding: 16px;
-  
+  background:#fff;
 }
-.toggleAndLabel label {
+.nhsuk-toggle-label label {
   display: inline-block;
-  width: calc(100% - 4em);
   vertical-align: middle;
 }
-.toggleAndLabel.waiting .spinner {
-  display: block;
-}
-.toggleAndLabel.waiting .toggleWrapper label:before, .toggleAndLabel.waiting .toggleWrapper label:after {
-  display: none;
-}
-.toggleAndLabel p {
+
+
+.nhsuk-toggle-label h2,.nhsuk-toggle-label p {
   display: inline-block;
   width: calc(100% - 4em);
   vertical-align: middle;
 } 
 ​
 ​
-.toggleWrapper {
+.nhsuk-toggle-wrapper {
   display: inline-block;
 }
-.toggleWrapper .spinner {
-    background: none;
-    position: absolute;
-    display: block;
-    z-index: 1;
-    padding: 0 0.875em;
-    width: auto;
-    height: 2em;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-​
-  .toggleWrapper input.toggle {
-    opacity: 0; 
-    position: absolute;
-    z-index: -1;
-  }
-  .toggleWrapper input.toggle span {
-      position: relative;
-      display: inline-block;
-      user-select: none;
-      transition: 0.4s ease;
-      height: 2.05em;
-      width: 3.5em;
-      border: 1px solid #e4e4e4;
-      border-radius: 4em;
-      vertical-align: middle;
-  }
-  .toggleWrapper input.toggle   + span::before {
-        content: "";
-        position: absolute;
-        display: block;
-        transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
-        height: 2em;
-        width: 3.4em;
-        top: 0;
-        left: 0;
-        border-radius: 2em;
-  }
-  .toggleWrapper {
-  display: inline-block;
-}
-.toggleWrapper .spinner {
-  background: none;
-  position: absolute;
-  display: block;
-  z-index: 1;
-  padding: 0 0.875em;
-  width: auto;
-  height: 2em;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-.toggleWrapper input.toggle {
-  opacity: 0;
+
+  ​
+.nhsuk-toggle-wrapper input.nhsuk-toggle {
+  opacity: 0; 
   position: absolute;
   z-index: -1;
+
 }
-.toggleWrapper input.toggle + span {
+.nhsuk-toggle-wrapper input.nhsuk-toggle span {
   position: relative;
   display: inline-block;
   user-select: none;
@@ -195,7 +136,7 @@ najfnglsdjfnglsjngs
   border-radius: 4em;
   vertical-align: middle;
 }
-.toggleWrapper input.toggle + span::before {
+.nhsuk-toggle-wrapper input.nhsuk-toggle + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -206,7 +147,41 @@ najfnglsdjfnglsjngs
   left: 0;
   border-radius: 2em;
 }
-.toggleWrapper input.toggle + span::after {
+.nhsuk-toggle-wrapper {
+  display: block;
+  float:right;
+}
+
+.nhsuk-toggle-wrapper input.nhsuk-toggle{
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  background: blue;
+}
+.nhsuk-toggle-wrapper input.nhsuk-toggle + span {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  transition: 0.4s ease;
+  height: 2.05em;
+  width: 3.5em;
+  border: 1px solid #e4e4e4;
+  border-radius: 4em;
+  vertical-align: middle;
+}
+
+.nhsuk-toggle-wrapper input.nhsuk-toggle + span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+  height: 2em;
+  width: 3.4em;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+}
+.nhsuk-toggle-wrapper input.nhsuk-toggle + span::after {
   content: "";
   position: absolute;
   display: block;
@@ -219,52 +194,12 @@ najfnglsdjfnglsjngs
   left: 0px;
   border-radius: 4em;
 }
-.toggleWrapper input.toggle:checked + span::before {
+.nhsuk-toggle-wrapper input.nhsuk-toggle:checked + span::before {
   background: #007f3b;
   transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
 }
-.toggleWrapper input.toggle:checked + span::after {
+.nhsuk-toggle-wrapper input.nhsuk-toggle:checked + span::after {
   left: 1.6em;
 }
-.toggleWrapper.waiting .spinner {
-  opacity: 1;
-}
-.toggleWrapper.waiting input.toggle + span {
-  opacity: 0;
-}
-.toggleWrapper.waiting input.toggle + span::before, .toggleWrapper.waiting input.toggle + span::after {
-  visibility: hidden;
-  opacity: 0;
-}
-​
-.loading-spinner-background {
-    position: fixed;
-    z-index: 10;
-    top: 0em;
-    right: 0em;
-    left: 0em;
-    bottom: 0em;
-    margin: auto;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-  }
-​
-  .loading-spinner {
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    width: 50px;
-    height: 50px;
-    border-top: 0.3em solid rgba(0, 94, 184, 1);
-    border-right: 0.3em solid rgba(0, 94, 184, 1);
-    border-bottom: 0.3em solid rgba(0, 94, 184, 1);
-    border-left: 0.3em solid rgba(0, 94, 184, 0);
-    animation: spinner-animation 1.5s infinite linear;
-    background-color: rgba(255, 255, 255, 0);
-    display: inline-block;
-    margin: 5px;
-  }
+
+
